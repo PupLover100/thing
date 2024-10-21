@@ -20,9 +20,15 @@
             font-family: 'Montserrat', sans-serif;
             color: #333;
             background-color: #f5f6fa;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Header Section */
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #181818;
+            color: #f1f1f1;
+        }
+
         header {
             background: linear-gradient(135deg, #0056b3, #007bff); /* Blue gradient */
             color: white;
@@ -32,6 +38,42 @@
             overflow: hidden;
         }
 
+        /* Dark Mode for Header */
+        body.dark-mode header {
+            background: linear-gradient(135deg, #111, #333);
+        }
+
+        /* Dark Mode Toggle Switch */
+        .dark-mode-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 0.5rem 1rem;
+            border: 2px solid #333;
+            background: none;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        /* Toggle Button for Dark Mode */
+        body.dark-mode .dark-mode-toggle {
+            border-color: #f1f1f1;
+            color: #f1f1f1;
+        }
+
+        body.dark-mode .dark-mode-toggle:hover {
+            background-color: #333;
+            color: #f1f1f1;
+        }
+
+        /* Header Section */
         header h1 {
             font-size: 4rem;
             margin-bottom: 1.5rem;
@@ -84,6 +126,12 @@
             position: relative;
         }
 
+        /* Dark Mode for About Section */
+        body.dark-mode #about {
+            background-color: #333;
+            color: #f1f1f1;
+        }
+
         #about img {
             border-radius: 50%;
             width: 400px;
@@ -123,6 +171,12 @@
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
         }
 
+        /* Dark Mode for Sections */
+        body.dark-mode .section {
+            background-color: #333;
+            color: #f1f1f1;
+        }
+
         .section h2 {
             font-size: 2.5rem;
             color: #007bff;
@@ -155,6 +209,11 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+        }
+
+        /* Dark Mode for Footer */
+        body.dark-mode footer {
+            background-color: #111;
         }
 
         footer p {
@@ -226,6 +285,9 @@
 
 <body>
 
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" id="darkModeToggle">Dark Mode</button>
+
     <header>
         <h1>Welcome to Vihaan's World</h1>
         <p>Explore my journey in leadership, technology, and innovation.</p>
@@ -252,36 +314,5 @@
             <li>Secretary/Web Developer of Letter to My Heritage</li>
             <li>Intern at Kolly AI</li>
             <li>Intern at iCode Bellevue</li>
-            <li>Specialized Flex Staffer, SeattleMUN 2025</li>
-            <li>Lead Programmer at Robotic Phoenixes</li>
-            <li>Member of the Technology Student Association</li>
-            <li>Member of the National Honor Society</li>
-            <li>Member of Future Health Professionals Club (HOSA)</li>
-            <li>Member of Technology Student Association
-            <li>Member of the Computer Science Club</li>
-            <li>Sushi Squad FRC 7461 Team - Electrical, Mechanical Engineering, Programming, Business, and Strategy</li>
-        </ul>
-    </section>
+            <li>Specialized Flex Staffer, SeattleMUN 202
 
-    <section id="achievements" class="section">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Attended 9 Model United Nations Conferences</li>
-            <li>Director of JCC Mongols at JMUN 2024</li>
-            <li>Participant in the Council of Olympus at KINGMUN</li>
-            <li>Finalist in Science Olympiad regional competitions</li>
-            <li>Leader in team-centric activities like Science Olympiad and FRC</li>
-            <li>Working on 'AI in Everyday Life' blog series for LinkedIn</li>
-            <li>Collaborating on 'From Concept to Creation: TSA by Joanna' podcast</li>
-            <li>Chief Technology Advisor for a political campaign's 'Digital Divide' project</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Vihaan's World. All rights reserved.</p>
-        <p><a href="#contact">Contact Me</a></p>
-    </footer>
-
-</body>
-
-</html>
