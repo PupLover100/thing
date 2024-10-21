@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vihaan's Personal Website">
+    <title>Vihaan Rawal</title>
+    <!-- Import Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f5f6fa;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #0056b3, #007bff); /* Blue gradient */
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* About Section */
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6rem 10%;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: -80px;
+            z-index: 10;
+            position: relative;
+        }
+
+        #about img {
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        #about img:hover {
+            transform: scale(1.05);
+        }
+
+        #about div {
+            max-width: 600px;
+            margin-left: 50px;
+        }
+
+        #about h2 {
+            font-size: 2.8rem;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            color: #555;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 6rem 10%;
+            background-color: #ffffff;
+            margin: 3rem 0;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            font-size: 1.2rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.3s;
+        }
+
+        .section ul li:hover {
+            background-color: #f1f1f1;
+        }
+
+        .section ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        header h1, header p {
+            animation: fadeInDown 1.2s ease-in-out;
+        }
+
+        nav a {
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            #about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about img {
+                margin-bottom: 2rem;
+                width: 300px;
+                height: 300px;
+            }
+
+            #about div {
+                margin-left: 0;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Vihaan's World</h1>
+        <p>Explore my journey in leadership, technology, and innovation.</p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#roles">Roles</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <img src="your_image.jpg" alt="Vihaan's Image">
+        <div>
+            <h2>About Me</h2>
+            <p>Hello! I'm Vihaan, a passionate student/leader focused on technology, robotics, and strategy. My path includes AI research, robotics competitions, and leading initiatives in both academic and extracurricular spaces. I'm constantly evolving through experiences, projects, and challenges in leadership and innovation.</p>
+        </div>
+    </section>
+
+    <section id="roles" class="section">
+        <h2>Roles</h2>
+        <ul>
+            <li>Co-Founder and President of VK Tutors</li>
+            <li>Secretary/Web Developer of Letter to My Heritage</li>
+            <li>Intern at Kolly AI</li>
+            <li>Intern at iCode Bellevue</li>
+            <li>Specialized Flex Staffer, SeattleMUN 2025</li>
+            <li>Lead Programmer at Robotic Phoenixes</li>
+            <li>Member of the Technology Student Association</li>
+            <li>Member of the National Honor Society</li>
+            <li>Member of Future Health Professionals Club (HOSA)</li>
+            <li>Member of Technology Student Association
+            <li>Member of the Computer Science Club</li>
+            <li>Sushi Squad FRC 7461 Team - Electrical, Mechanical Engineering, Programming, Business, and Strategy</li>
+        </ul>
+    </section>
+
+    <section id="achievements" class="section">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Attended 9 Model United Nations Conferences</li>
+            <li>Director of JCC Mongols at JMUN 2024</li>
+            <li>Participant in the Council of Olympus at KINGMUN</li>
+            <li>Finalist in Science Olympiad regional competitions</li>
+            <li>Leader in team-centric activities like Science Olympiad and FRC</li>
+            <li>Working on 'AI in Everyday Life' blog series for LinkedIn</li>
+            <li>Collaborating on 'From Concept to Creation: TSA by Joanna' podcast</li>
+            <li>Chief Technology Advisor for a political campaign's 'Digital Divide' project</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vihaan's World. All rights reserved.</p>
+        <p><a href="#contact">Contact Me</a></p>
+    </footer>
+
+</body>
+
+</html>
